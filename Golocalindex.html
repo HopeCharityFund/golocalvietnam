@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoLocalVietnam - Trải nghiệm cá nhân hóa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #ffa500;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+        }
+        .hero {
+            background: url('C:/Users/nhamx/Desktop/GoLocalVietNam/Images/background-1.JPG') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 120px 20px;
+        }
+        .hero h1 {
+            font-size: 2.5em;
+        }
+        .hero input {
+            padding: 15px;
+            margin-top: 20px;
+            width: 80%;
+            max-width: 600px;
+            border: none;
+            border-radius: 5px;
+        }
+        .hero button {
+            padding: 15px 25px;
+            margin-top: 20px;
+            background-color: #ffa500;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .hero button:hover {
+            background-color: #e69500;
+        }
+        .section {
+            padding: 20px;
+        }
+        .section h2 {
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .guides {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+        }
+        .guides .card {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 20px;
+            border: 2px solid #ffa500;
+            border-radius: 5px;
+            background-color: #fff7e6;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: calc(45% - 20px);
+        }
+        .guides .card img {
+            max-width: 120px;
+            max-height: 120px;
+            border-radius: 5px;
+        }
+        .guides .card .details {
+            margin-top: 10px;
+        }
+        .guides .card .review {
+            margin-top: 15px;
+            background-color: #ffd27f;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .guides .card .rating {
+            color: #ffa500;
+            font-size: 1.2em;
+            margin-top: 5px;
+        }
+        .services {
+            display: flex;
+            justify-content: space-around;
+        }
+        .services .card {
+            flex: 1;
+            margin: 0 10px;
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: white;
+        }
+        .contact-card {
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px solid #ffa500;
+            border-radius: 5px;
+            background-color: #fff7e6;
+            max-width: 90%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        footer {
+            background-color: #ffa500;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let currentBackground = 1;
+            const totalBackgrounds = 10;
+            const heroSection = document.querySelector('.hero');
+
+            if (heroSection) {
+                setInterval(() => {
+                    currentBackground = (currentBackground % totalBackgrounds) + 1;
+                    heroSection.style.backgroundImage = `url('C:/Users/nhamx/Desktop/GoLocalVietNam/Images/background-${currentBackground}.JPG')`;
+                }, 10000);
+            }
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">GoLocalVietnam</div>
+        <nav>
+            <a href="#home">Trang chủ</a>
+            <a href="#guides">Hướng dẫn viên</a>
+            <a href="#footer">Liên hệ</a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Khám phá Việt Nam theo cách của bạn</h1>
+        <input type="text" placeholder="Nhập địa điểm bạn muốn đến">
+        <button>Tìm kiếm</button>
+    </section>
+
+    <section id="services" class="section">
+        <h2>Dịch vụ của chúng tôi</h2>
+        <div class="services">
+            <div class="card">
+                <p>Tour riêng 100%</p>
+            </div>
+            <div class="card">
+                <p>Hành trình tùy chỉnh</p>
+            </div>
+            <div class="card">
+                <p>Hỗ trợ khách hàng 24/7</p>
+            </div>
+        </div>
+    </section>
+
+   <section id="create-trip" class="section">
+    <h2 style="text-align: center; font-size: 1.8em; margin-bottom: 20px;">Tạo Chuyến Đi Của Bạn</h2>
+    <div class="trip-container" style="margin: 0 auto; padding: 20px; background-color: #fff7e6; border: 2px solid #ffa500; border-radius: 5px; max-width: 100%; text-align: center;">
+        <div class="trip-steps" style="display: flex; justify-content: center; align-items: center; gap: 30px;">
+            <div class="step" style="display: flex; flex-direction: column; align-items: center;">
+                <div style="background-color: #ffa500; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1.2em; font-weight: bold;">1</div>
+                <p style="margin-top: 10px; font-weight: bold;">Tạo lộ trình</p>
+            </div>
+            <div style="font-size: 1.5em; color: #ccc;">→</div>
+            <div class="step" style="display: flex; flex-direction: column; align-items: center;">
+                <div style="background-color: #ffa726; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1.2em; font-weight: bold;">2</div>
+                <p style="margin-top: 10px; font-weight: bold;">Xem ưu đãi</p>
+            </div>
+            <div style="font-size: 1.5em; color: #ccc;">→</div>
+            <div class="step" style="display: flex; flex-direction: column; align-items: center;">
+                <div style="background-color: #ef5350; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1.2em; font-weight: bold;">3</div>
+                <p style="margin-top: 10px; font-weight: bold;">Đặt hướng dẫn viên</p>
+            </div>
+        </div>
+        <button style="margin-top: 30px; background-color: #ffa500; color: white; border: none; border-radius: 5px; padding: 15px 30px; font-size: 1.2em; cursor: pointer;">Tạo Chuyến Đi</button>
+    </div>
+    </div>
+</section>
+
+    <section id="guides" class="section">
+        <h2>Hướng dẫn viên nổi bật</h2>
+        <div class="guides">
+            <div class="card">
+                <img src="C:/Users/nhamx/Desktop/GoLocalVietNam/Images/chandung1.JPG" alt="Hướng dẫn viên 1">
+                <div class="details">
+                    <p><strong>Nguyễn Văn A</strong></p>
+                    <p>Giá: $10/giờ</p>
+                    <p>Ngôn ngữ: Tiếng Việt, Tiếng Anh</p>
+                </div>
+                <div class="review">
+                    <p><strong>Review:</strong> "Hướng dẫn rất nhiệt tình và chu đáo."</p>
+                    <div class="rating">★★★★★</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="C:/Users/nhamx/Desktop/GoLocalVietNam/Images/chandung2.jpg" alt="Hướng dẫn viên 2">
+                <div class="details">
+                    <p><strong>Trần Thị B</strong></p>
+                    <p>Giá: $12/giờ</p>
+                    <p>Ngôn ngữ: Tiếng Việt, Tiếng Pháp</p>
+                </div>
+                <div class="review">
+                    <p><strong>Review:</strong> "Kiến thức sâu rộng và rất thân thiện!"</p>
+                    <div class="rating">★★★★☆</div>
+                </div>
+            </div>
+            <div class="card additional-guide" style="display: none;">
+                <img src="C:/Users/nhamx/Desktop/GoLocalVietNam/Images/chandung3.jpg" alt="Hướng dẫn viên 3">
+                <div class="details">
+                    <p><strong>Phạm Văn C</strong></p>
+                    <p>Giá: $15/giờ</p>
+                    <p>Ngôn ngữ: Tiếng Việt, Tiếng Anh</p>
+                </div>
+                <div class="review">
+                    <p><strong>Review:</strong> "Luôn chu đáo và nhiệt tình."</p>
+                    <div class="rating">★★★★☆</div>
+                </div>
+            </div>
+            <div class="card additional-guide" style="display: none;">
+                <img src="C:/Users/nhamx/Desktop/GoLocalVietNam/Images/chandung4.jpg" alt="Hướng dẫn viên 4">
+                <div class="details">
+                    <p><strong>Trần Thị D</strong></p>
+                    <p>Giá: $18/giờ</p>
+                    <p>Ngôn ngữ: Tiếng Việt, Tiếng Pháp</p>
+                </div>
+                <div class="review">
+                    <p><strong>Review:</strong> "Hiểu biết và thân thiện."</p>
+                    <div class="rating">★★★★★</div>
+                </div>
+            </div>
+            <div class="card additional-guide" style="display: none;">
+                <img src="C:/Users/nhamx/Desktop/GoLocalVietNam/Images/chandung5.jpg" alt="Hướng dẫn viên 5">
+                <div class="details">
+                    <p><strong>Hoàng Văn E</strong></p>
+                    <p>Giá: $20/giờ</p>
+                    <p>Ngôn ngữ: Tiếng Việt, Tiếng Anh</p>
+                </div>
+                <div class="review">
+                    <p><strong>Review:</strong> "Đáng tin cậy và chuyên nghiệp."</p>
+                    <div class="rating">★★★★★</div>
+                </div>
+            </div>
+            <div class="card additional-guide" style="display: none;">
+                <img src="C:/Users/nhamx/Desktop/GoLocalVietNam/Images/chandung6.jpg" alt="Hướng dẫn viên 6">
+                <div class="details">
+                    <p><strong>Nguyễn Thị F</strong></p>
+                    <p>Giá: $22/giờ</p>
+                    <p>Ngôn ngữ: Tiếng Việt, Tiếng Anh</p>
+                </div>
+                <div class="review">
+                    <p><strong>Review:</strong> "Luôn nhiệt tình và đáng mến."</p>
+                    <div class="rating">★★★★☆</div>
+                </div>
+            </div>
+        </div>
+        <button id="loadMore" style="margin: 20px auto; display: block; background-color: #ffa500; color: white; border: none; border-radius: 5px; padding: 10px 20px; cursor: pointer;">Thêm hướng dẫn viên</button>
+        <button id="collapseGuides" style="margin: 20px auto; display: none; background-color: #e69500; color: white; border: none; border-radius: 5px; padding: 10px 20px; cursor: pointer;">Thu gọn hướng dẫn viên</button>
+    
+
+    <footer id="footer">
+        <div style="text-align: left; margin: 0 auto; padding: 10px; max-width: 90%;">
+            <p style="font-size: 0.9em;"><strong>Vũ Lê Hà Giang</strong>: Người phụ trách kế hoạch và chiến lược.</p>
+            <p style="font-size: 0.9em;"><strong>Nguyễn Hoàng Anh</strong>: Chuyên gia kỹ thuật và triển khai dự án.</p>
+            <p style="font-size: 0.9em;"><strong>Nhâm Ngọc Hải Lam</strong>: Đầu mối quan hệ đối tác và truyền thông.</p>
+            <p style="font-size: 0.9em;">Email: contact@golocalvietnam.com</p>
+            <p style="font-size: 0.9em;">Số điện thoại: +84 123 456 789</p>
+            <p style="font-size: 0.9em;">Địa chỉ: Lô P2, Tp. Hồ Chí Minh, Việt Nam</p>
+        </div>
+        &copy; 2025 GoLocalVietnam - Khám phá Việt Nam theo cách của bạn!
+    </footer>
+    <script>
+        const loadMoreButton = document.getElementById('loadMore');
+        const collapseButton = document.getElementById('collapseGuides');
+        
+        loadMoreButton.addEventListener('click', () => {
+            const hiddenCards = document.querySelectorAll('.additional-guide');
+            hiddenCards.forEach((card) => {
+                card.style.display = 'flex';
+            });
+            loadMoreButton.style.display = 'none';
+            collapseButton.style.display = 'block';
+        });
+
+        collapseButton.addEventListener('click', () => {
+            const hiddenCards = document.querySelectorAll('.additional-guide');
+            hiddenCards.forEach((card) => {
+                card.style.display = 'none';
+            });
+            collapseButton.style.display = 'none';
+            loadMoreButton.style.display = 'block';
+        });
+    </script>
+    <script>
+        const loadMoreButton = document.getElementById('loadMore');
+        loadMoreButton.addEventListener('click', () => {
+            const hiddenCards = document.querySelectorAll('.additional-guide');
+            hiddenCards.forEach((card) => {
+                card.style.display = 'flex';
+            });
+            loadMoreButton.style.display = 'none';
+        });
+
+    <section id="contact" class="section">
+        <h2>Liên hệ với chúng tôi</h2>
+        <div class="contact-card" style="text-align: left; margin: 0 auto; padding: 20px; max-width: 90%;">
+            <p><strong>Vũ Lê Hà Giang</strong>: Người phụ trách kế hoạch và chiến lược.</p>
+            <p><strong>Nguyễn Hoàng Anh</strong>: Chuyên gia kỹ thuật và triển khai dự án.</p>
+            <p><strong>Nhâm Ngọc Hải Lam</strong>: Đầu mối quan hệ đối tác và truyền thông.</p>
+            <p>Email: contact@golocalvietnam.com</p>
+            <p>Số điện thoại: +84 123 456 789</p>
+            <p>Địa chỉ: Lô P2, Tp. Hồ Chí Minh, Việt Nam</p>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 GoLocalVietnam - Khám phá Việt Nam theo cách của bạn!
+    </footer>
+</body>
+</html>
