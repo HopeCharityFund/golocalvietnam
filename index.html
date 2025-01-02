@@ -99,6 +99,8 @@
         }
         .services {
             display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
             justify-content: space-around;
         }
         .services .card {
@@ -109,6 +111,7 @@
             border: 1px solid #ddd;
             border-radius: 5px;
             background-color: white;
+            width: calc(100% - 20px);
         }
         .contact-card {
             margin: 20px auto;
@@ -125,6 +128,29 @@
             color: white;
             text-align: center;
             padding: 10px 0;
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            header nav {
+                margin-top: 10px;
+            }
+            .guides .card {
+                flex-direction: column;
+                width: calc(100% - 20px);
+                text-align: center;
+            }
+            .services .card {
+                width: calc(100% - 20px);
+            }
+            .hero h1 {
+                font-size: 2em;
+            }
+            .hero {
+                padding: 80px 20px;
+            }
         }
     </style>
 <script>
